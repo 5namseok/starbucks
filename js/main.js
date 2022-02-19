@@ -1,20 +1,3 @@
-// 검색창 포커스 설정하는법
-const searchEl = document.querySelector('.search'),
-      searchInput = searchEl.querySelector('input'),
-      searchIcon = searchEl.querySelector('.searchicon');
-
-searchEl.addEventListener('click',()=>{
-  searchInput.focus();
-});
-searchInput.addEventListener('focus',()=>{
-  searchEl.classList.add('focused');
-  searchInput.setAttribute('placeholder', '통합검색');
-})
-searchInput.addEventListener('blur',()=>{
-  searchEl.classList.remove('focused');
-  searchInput.setAttribute('placeholder', '');
-})
-
 // badge 없애기, 1.Lodash '_.throttle(함수, 시간)' 2.gsap 연결
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -145,7 +128,3 @@ spyEls.forEach(function(spyEl) {
       .addTo(new ScrollMagic.Controller());
 });
 
-const num = ['oh', 'nam', 'seok'];
-const thisYear = document.querySelector('.this-year');
-let j=0;
-thisYear.textContent = new Date().getFullYear();
